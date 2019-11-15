@@ -1,0 +1,36 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-image: url("https://i.kym-cdn.com/photos/images/original/001/336/607/c2e.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* max-height: 100%; */
+}
+
+/* .top-blue {
+  background-color: rgb(81,162,215);
+  padding: 0;
+  margin: 0;
+  min-height: 400px;
+}
+
+.left-red{
+  background-color: red;
+  width: 20px;
+  min-height: 40px;
+}
+
+.right-red {
+  background-color: red;
+  width: 15px;
+  min-height: 40px;
+  float: right;
+
+}
+
+.bottom-white {
+  background-color: snow;
+  padding: 0;
+  margin: 0;
+} */
