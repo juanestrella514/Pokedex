@@ -1,129 +1,35 @@
-body {
-  /* background-image: url('https://codepen.io/steftastan/pen/XbMVGw/image/large.png');
-  background-repeat: no-repeat; */
-  background-color: #ccc;
-  margin: 0;
-  overflow: hidden;
+
+@keyframes pulse {
+  0% {background-color: darkred;}
+  50% {background-color: #ccc;}
+  100% {background-color: black;}
 }
 
-
-#pokeball {
-
-  }
-
-/* top for semi-circle  */
- /* #top {
-  background-color: blue;
-height: 75vh;
-width: 100vw;
-border-radius: 1080px 1080px 0 0;
-top: -5%;
-
-} */
-
-/* #top {
-  background-color: blue;
-  min-height: 306px;
-  /* width: 1199px;
-  border-radius: 900px 900px 0 0; */
-  /* width: 98vw;
-  border-radius: 1330px 1178px 0 0; */
-/* } */
-
-  /* background-color: blue;
-  min-height: 180px;
-  width: 360px;
-  border-radius: 360px 360px 0 0;
-  top: 90px;
-  bottom: 600px;
-  left: 250px;
-  position: absolute; */
-  /* background-color: blue;
-    min-height: 205px;
-    width: 904px;
-    border-radius: 900px 900px 0 0;
-  } */
-
-/* #top-left { */
- /* background-color: red;
- min-height: 50px;
- width: 25px;
- transform: rotate(110deg);
- border-radius: 90px 90px 0 0;
- right: 50px;
- bottom: 60px; */
- /* background-color: red;
-     min-height: 43px;
-     width: 198px;
-     left: 98px;
-     top: 114px;
-     transform: rotate(209deg);
-     border-radius: 124px 124px 122px 98px; */
-     /* left: 84px;
-     top: 72px; */
-     /* position: absolute;
- } */
-
-/* #top-right {
-    background-color: red;
-    min-height: 43px;
-    width: 198px;
-    transform: rotate(328deg);
-    border-radius: 124px 124px 122px 98px;
-    top: 127px; */
-    /* top: 72px; */
-    /* right: 75px;
-    position: absolute;
-} */
-
-/* #mid {
-
-  background-color: black;
-    /* min-height: 79px; */
-    /* min-height: 110px;
-    width: 100vw;
-} */ */
-
-/* .Big-circle {
-  border: snow 1px solid;
-  border-radius: 10px;
-} */
-
-/* #bottom {
-  background-color: snow; */
-
-  /* min-height: 100px; */
-
-  /* position: absolute; */
-
-  /* ackground-color: snow;
-    min-height: 324px;
-    /* position: absolute; */
-
-    /* min-height: 340px;
-    width: 98vw;
-    border-radius: 1330px 1178px 0 0;
-    transform: rotate(180deg);
-} */
-
-
-
-/* new */
-
 body {
-  background: red;
+  animation: pulse 10s infinite ;
   overflow: hidden;
   margin: 0;
 
 }
-#pokeball {
-  /* position: absolute; */
+
+
+h1 {
+  font-family: monospace;
+  font-size: 30pt;
+  text-align: center;
+}
+
+@keyframes slideLeft {
+  0% {left: 0px; top: 0px;}
+  100% {left: -500px; top: -500px;}
 }
 #top {
-background: linear-gradient( #3435F7, darkblue);
-    height: 50vh;
-    width: 50vw;
-    border-radius: 50vw 50vw 0 0;
+  animation-name: slideLeft;
+  animation-duration: 4.5s;
+  background: linear-gradient( red, darkred);
+  height: 50vh;
+  width: 50vw;
+  border-radius: 50vw 50vw 0 0;
   border: 2px solid black;
   position: absolute;
   top: 0;
@@ -133,7 +39,14 @@ background: linear-gradient( #3435F7, darkblue);
 
 }
 
+@keyframes move {
+  0%   {left: 0px; bottom: 0px;}
+  100%   {left: -500px; bottom: -500px;}
+}
+
 #bottom {
+  animation: move;
+  animation-duration: 4.5s;
   background: linear-gradient(to top, black 20%, white 10%);
   height: 50vh;
   width: 50vw;
@@ -146,7 +59,14 @@ background: linear-gradient( #3435F7, darkblue);
   border: 2px solid black;
 }
 
+@keyframes begone {
+  from  {opacity: 1}
+  to {opacity: 0}
+}
+
 .Big-circle {
+  animation-name: begone;
+  animation-duration: 5s;
   background: #ccc;
   border: 20px solid black;
   height: 100px;
@@ -160,21 +80,33 @@ background: linear-gradient( #3435F7, darkblue);
 }
 
 .btn {
+
   height: 50px;
   width: 50px;
   border: 6px solid black;
   position: absolute;
   border-radius: 50%;
   background: transparent;
-  left: 17%;
-  bottom: 18%;
+  left: 26%;
+  bottom: 22%;
 
 }
 
-@keyframes slide {
-  from {left: }
+@keyframes rainbow {
+0% {background-color: #ff0000;}
+10% {background-color: #ff8000;}
+20% {background-color: #ffff00;}
+30% {background-color: #80ff00;}
+40% {background-color: #00ff00;}
+50% {background-color: #00ff80;}
+60% {background-color: #00ffff;}
+70% {background-color: #0080ff;}
+80% {background-color: #0000ff;}
+90% {background-color: #8000ff;}
+100% {background-color: #ff0080;}
 }
+
 
 .btn:hover {
-  background: linear-gradient(45deg, #ccc, darkred)
+  animation: rainbow 2s infinite;
 }
